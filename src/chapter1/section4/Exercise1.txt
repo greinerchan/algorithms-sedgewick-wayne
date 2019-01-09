@@ -1,13 +1,11 @@
 1.4.1
 
-Counting argument:
-When choosing the first element there are N possibilities. 
-When choosing the second element there are N - 1 possibilities.
-When choosing the third element there are N - 2 possibilities.
+The total execution times for if statement is the product of execution times for all loops.
 
-This is a total of N(N - 1)(N - 2). If the order of items mattered, this would be the result.
-However, the order of items does not matter. For 3 items there is a total of 3! possible orderings.
-3! = 6
-
-So, the number of triples that can be chosen from N items is equal to:
-N(N - 1)(N - 2) / 6
+           freq
+loop1       N
+loop2     Σ(start at 1 end at n) （n - i)  = (n^2 - n)/2 
+loop3    Σ(start at 0 end at n - 1)
+        * Σ(start at j = i + 1 end at n - 1) 
+        * Σ(start at k = j + 1 end at n - 1)
+				= n^3 / 6 - n^2/2 + n/3
